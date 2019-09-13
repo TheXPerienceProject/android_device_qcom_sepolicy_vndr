@@ -70,3 +70,7 @@ ifneq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953, $(TARGET_BOARD_PLATFORM))
     endif
 endif
 endif
+
+#XPerience Sepolicy
+-include device/xperience/sepolicy/qcom/sepolicy.mk
+
