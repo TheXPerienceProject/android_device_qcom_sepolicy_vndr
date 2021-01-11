@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020,2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -40,3 +40,5 @@ allow hal_srvctracker_client vendor_hal_srvctracker_hwservice:hwservice_manager 
 hwbinder_use(hal_srvctracker)
 
 get_prop(vendor_hal_srvctracker_default, hwservicemanager_prop)
+
+/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/spm_lvl                u:object_r:vendor_sysfs_scsi_host:s0
