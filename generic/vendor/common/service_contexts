@@ -60,3 +60,5 @@
 # # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default         u:object_r:hal_wifi_supplicant_service:s0
+#Refer to b/236750094
+android.hardware.drm.IDrmFactory/widevine                             u:object_r:hal_drm_service:s0
