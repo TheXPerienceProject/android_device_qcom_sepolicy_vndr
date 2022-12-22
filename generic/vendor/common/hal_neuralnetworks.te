@@ -36,6 +36,7 @@ init_daemon_domain(vendor_hal_neuralnetworks_default)
 allow vendor_hal_neuralnetworks_default fwk_sensor_hwservice:hwservice_manager find;
 allow vendor_hal_neuralnetworks_default vendor_qdsp_device:chr_file r_file_perms;
 allow vendor_hal_neuralnetworks_default vendor_xdsp_device:chr_file r_file_perms;
+hal_client_domain(vendor_hal_neuralnetworks_default, vendor_hal_dspmanager)
 allow vendor_hal_neuralnetworks_default ion_device:chr_file r_file_perms;
 
 #allow to read adsp related properties
