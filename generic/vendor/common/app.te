@@ -42,3 +42,6 @@ get_prop(appdomain, vendor_display_prop)
 allow appdomain vendor_npu_device:chr_file r_file_perms;
 
 dontaudit appdomain vendor_hal_qspmhal_hwservice:hwservice_manager find;
+
+#Allow all apps to have read access to vendor_display_prop
+get_prop(appdomain, vendor_display_prop)
