@@ -53,3 +53,6 @@ hal_client_domain(vendor_hal_iop_default, vendor_hal_perf)
 
 # Ignore these denials.
 dontaudit vendor_hal_iop self:capability kill;
+
+binder_use(vendor_hal_iop_default)
+
