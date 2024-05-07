@@ -41,8 +41,5 @@ r_dir_file(vendor_atfwd, vendor_sysfs_data);
 
 set_prop(vendor_atfwd, vendor_radio_prop)
 
-# IAtFwd Stable AIDL
-hal_server_domain(vendor_atfwd, vendor_hal_atfwd);
-
 hwbinder_use(vendor_atfwd)
 get_prop(vendor_atfwd, hwservicemanager_prop)
