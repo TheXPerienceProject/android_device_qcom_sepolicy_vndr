@@ -1,0 +1,2 @@
+allow vendor_poweroptservice vendor_soc_name_prop:file r_file_perms;
+
