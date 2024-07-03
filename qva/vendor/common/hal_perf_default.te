@@ -38,6 +38,10 @@ binder_call(vendor_hal_perf_client, vendor_hal_perf_server)
 add_hwservice(vendor_hal_perf_server, vendor_hal_perf_hwservice)
 allow vendor_hal_perf_client vendor_hal_perf_hwservice:hwservice_manager find;
 
+#Allow AIDL base perf-hal communication
+hal_attribute_service(vendor_hal_perf, vendor_hal_perf2_service)
+binder_call(vendor_hal_perf_server, servicemanager)
+
 allow vendor_hal_perf_default cgroup:file r_file_perms;
 allow vendor_hal_perf_default proc:file rw_file_perms;
 allow vendor_hal_perf vendor_latency_device:chr_file rw_file_perms;
