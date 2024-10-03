@@ -67,7 +67,17 @@ vendor.qti.hardware.radio.ims.IImsRadio/imsradio0         u:object_r:vendor_hal_
 vendor.qti.hardware.radio.ims.IImsRadio/imsradio1         u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot1  u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.qtiradio.IQtiRadioStable/slot2  u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.am.IQcRilAudio/slot1            u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.am.IQcRilAudio/slot2            u:object_r:vendor_hal_telephony_service2:s0
 vendor.qti.hardware.radio.qtiradioconfig.IQtiRadioConfig/default u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook0 u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.qcrilhook.IQtiOemHook/oemhook1 u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.hardware.radio.internal.deviceinfo.IDeviceInfo/deviceinfo u:object_r:vendor_hal_telephony_service2:s0
+vendor.qti.data.factoryservice.IFactory/default          u:object_r:vendor_hal_factory_aidlservice:s0
+vendor.qti.hardware.perf2.IPerf/default                u:object_r:vendor_hal_perf2_service:s0
+vendor.qti.hardware.dpmaidlservice.IDpmService/default u:object_r:vendor_hal_dpmaidl_service:s0
+vendor.qti.ims.factoryaidlservice.IImsFactory/default  u:object_r:vendor_hal_factory_aidlservice:s0
 vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default         u:object_r:hal_wifi_supplicant_service:s0
+
 #Refer to b/236750094
 android.hardware.drm.IDrmFactory/widevine                             u:object_r:hal_drm_service:s0

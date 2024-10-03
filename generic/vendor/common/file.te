@@ -27,7 +27,7 @@
 
 # Changes from Qualcomm Innovation Center are provided under the following license:
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -114,10 +114,14 @@ type vendor_sysfs_trusted_touch_event, sysfs_type, fs_type;
 type vendor_sysfs_trusted_touch_type, sysfs_type, fs_type;
 type vendor_sysfs_mmc_device_type, fs_type, sysfs_type;
 
+#haptics sysfs files
+type vendor_sysfs_haptics, fs_type, sysfs_type;
+
 # /proc
 type vendor_proc_wifi_dbg, fs_type, proc_type;
 type vendor_proc_audiod, fs_type, proc_type;
 type vendor_proc_shs, fs_type, proc_type;
+type vendor_proc_firmware_cfg, fs_type, proc_type;
 
 type vendor_qmuxd_socket, file_type;
 type vendor_rild_socket, file_type;
