@@ -120,7 +120,7 @@
 /vendor/bin/ATFWD-daemon        u:object_r:vendor_atfwd_exec:s0
 /vendor/bin/hw/android\.hardware\.vr@1\.0-service.crosshatch      u:object_r:hal_vr_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fpc u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/android.hardware.thermal@2.0-service.qti      u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/android\.hardware\.thermal-service\.qti     u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/hw/vendor.qti.hardware.limits@1.0-service      u:object_r:vendor_hal_limits_qti_exec:s0
 /vendor/bin/thermal-engine      u:object_r:vendor_thermal-engine_exec:s0
 /vendor/bin/sensors.qti         u:object_r:vendor_sensors_qti_exec:s0
@@ -161,7 +161,6 @@
 /vendor/bin/oemlock_provision   u:object_r:hal_bootctl_default_exec:s0
 /vendor/bin/oemlock-bridge      u:object_r:hal_bootctl_default_exec:s0
 /(vendor|system/vendor)/bin/msm_irqbalance u:object_r:vendor_msm_irqbalanced_exec:s0
-/vendor/bin/hw/android\.hardware\.usb@1\.1-service.crosshatch             u:object_r:hal_usb_default_exec:s0
 /vendor/bin/chre                u:object_r:vendor_chre_exec:s0
 /vendor/bin/time_daemon         u:object_r:vendor_time_daemon_exec:s0
 /vendor/bin/imsrcsd             u:object_r:vendor_hal_rcsservice_exec:s0
@@ -456,6 +455,7 @@
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/auto_hibern8           u:object_r:vendor_sysfs_scsi_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+/host0/scsi_host/host0(/.*)?  u:object_r:vendor_sysfs_scsi_host:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/scsi_generic(/.*)?     u:object_r:vendor_sysfs_scsi_target:s0
+/sys/devices/virtual/bdi/[0-9]+:[0-9]+/read_ahead_kb                u:object_r:vendor_sysfs_mmc_host:s0
 
 # VM Neuron block device mapping node
 /sys/devices/platform/soc/soc:qcom,svm_neuron_block/soc:qcom,svm_neuron_block:application/blk_name  u:object_r:vendor_sysfs_svm_neuron:s0
@@ -490,6 +490,9 @@
 
 #Light AIDL HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
+
+#Memtrack AIDL HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti.hardware\.memtrack-service   u:object_r:hal_memtrack_default_exec:s0
 
 /(vendor|system/vendor)/bin/init\.class_main\.sh        u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.crda\.sh              u:object_r:vendor_qti_init_shell_exec:s0
