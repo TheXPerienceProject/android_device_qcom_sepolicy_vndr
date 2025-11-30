@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,19 +25,9 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-add_hwservice(hal_nfc_default, hal_nfc_hwservice)
+# ​​​​Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
-# Get NFC properties
-get_prop(hal_nfc_default, vendor_nfc_nq_prop)
-userdebug_or_eng(`
-get_prop(hal_nfc_default, vendor_mink_trace_prop)
-')
-
-set_prop(hal_nfc, vendor_nfc_prop)
-
-#Allow access to firmware
-r_dir_file(hal_nfc_default, firmware_file)
-allow hal_nfc_default vendor_nfc_vendor_data_file:dir rw_dir_perms;
-allow hal_nfc_default vendor_nfc_vendor_data_file:file create_file_perms;
-allow hal_nfc_default vendor_hal_nxpnfc_service:service_manager { find add };
-unix_socket_connect(hal_nfc_default, vendor_ssgtzd, vendor_ssgtzd)
+#Allow for property access
+set_prop(vendor_wfdhdcphalservice_qti,vendor_wfd_prop)
